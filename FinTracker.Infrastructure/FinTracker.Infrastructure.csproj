@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FinTracker.Application\FinTracker.Application.csproj" />
+    <ProjectReference Include="..\FinTracker.Domain\FinTracker.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
