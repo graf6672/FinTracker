@@ -4,7 +4,9 @@ using System.Text;
 
 namespace FinTracker.Domain.Enums
 {
-    internal class TransactionType
+    public enum GoalStatus
     {
+        Active,
+        Completed
     }
 }
