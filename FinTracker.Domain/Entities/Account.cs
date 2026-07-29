@@ -56,5 +56,23 @@ namespace FinTracker.Domain.Entities
 
             Status = AccountStatus.Closed;
         }
+        public void Deposit(decimal amount)
+        {
+            if (amount <= 0)
+            {
+                throw new ArgumentException("Amount must be greater than zero.");
+            }
+
+            Balance += amount;
+        }
+        public void Withdraw(decimal amount)
+        {
+            if (amount <= 0)
+            {
+                throw new ArgumentException("Amount must be greater than zero.");
+            }
+
+            Balance -= amount;
+        }
     }
 }
