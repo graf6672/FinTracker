@@ -11,10 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DTOs\Account\" />
-    <Folder Include="DTOs\Category\" />
     <Folder Include="DTOs\User\" />
-    <Folder Include="DTOs\FinancialGoal\" />
   </ItemGroup>
 
 </Project>
