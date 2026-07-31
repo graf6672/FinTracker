@@ -20,6 +20,7 @@ namespace FinTracker.Application.UseCases.FinancialGoals
 
         public async Task<CreateFinancialGoalResponse> ExecuteAsync(CreateFinancialGoalRequest request)
         {
+            ArgumentNullException.ThrowIfNull(request);
             var user = await _userRepository.GetByIdAsync(request.UserId);
             if (user is null)
             {

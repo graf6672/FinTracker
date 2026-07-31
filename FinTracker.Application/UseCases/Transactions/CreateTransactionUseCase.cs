@@ -24,6 +24,7 @@ namespace FinTracker.Application.UseCases.Transactions
 
         public async Task<CreateTransactionResponse> ExecuteAsync(CreateTransactionRequest request)
         {
+            ArgumentNullException.ThrowIfNull(request);
             var account = await _accountRepository.GetByIdAsync(request.AccountId);
             if (account is null)
             {

@@ -20,6 +20,7 @@ namespace FinTracker.Application.UseCases.Categories
 
         public async Task<CreateCategoryResponse> ExecuteAsync(CreateCategoryRequest request)
         {
+            ArgumentNullException.ThrowIfNull(request);
             var user = await _userRepository.GetByIdAsync(request.UserId);
             if (user is null)
             {

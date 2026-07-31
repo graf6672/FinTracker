@@ -19,6 +19,7 @@ namespace FinTracker.Application.UseCases.Accounts
 
         public async Task<CreateAccountResponse> ExecuteAsync(CreateAccountRequest request)
         {
+            ArgumentNullException.ThrowIfNull(request);
             var user = await _userRepository.GetByIdAsync(request.UserId);
             if (user is null)
             {

@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FinTracker.Application\FinTracker.Application.csproj" />
+    <ProjectReference Include="..\FinTracker.Infrastructure\FinTracker.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
