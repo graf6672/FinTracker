@@ -16,6 +16,11 @@
 
         public DateTime TransactionDate { get; private set; }
 
+        private Transaction()
+        {
+            // Requiered my EF Core
+        }
+
         public Transaction(Account account, Category category, decimal amount, DateTime transDate, string? description = null)
         {
             if (account == null)

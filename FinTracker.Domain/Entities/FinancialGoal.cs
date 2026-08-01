@@ -21,6 +21,11 @@ namespace FinTracker.Domain.Entities
 
         public DateTime CreatedAt { get; private set; }
 
+        private FinancialGoal()
+        {
+            // Requiered my EF Core
+        }
+
         public FinancialGoal(User user, string name, decimal targetAmount, decimal currentAmount = 0, DateTime? targetDate = null)
         {
             ArgumentNullException.ThrowIfNull(user);

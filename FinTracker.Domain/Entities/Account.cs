@@ -16,6 +16,11 @@ namespace FinTracker.Domain.Entities
 
         public ICollection<Transaction> Transactions { get; private set; } = new List<Transaction>();
 
+        private Account()
+        {
+            // Requiered my EF Core
+        }
+
         public Account(User user, string name)
         {
             if (string.IsNullOrWhiteSpace(name))

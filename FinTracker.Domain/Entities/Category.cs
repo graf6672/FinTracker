@@ -18,6 +18,11 @@ namespace FinTracker.Domain.Entities
 
         public ICollection<Transaction> Transactions { get; private set; } = new List<Transaction>();
 
+        private Category()
+        {
+            // Requiered my EF Core
+        }
+
         public Category(User user, string name, CategoryType type)
         {
             if (string.IsNullOrWhiteSpace(name))

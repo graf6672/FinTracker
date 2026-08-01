@@ -14,6 +14,10 @@
         public ICollection<Category> Categories { get; private set; } = new List<Category>();
         public ICollection<FinancialGoal> FinancialGoals { get; private set; } = new List<FinancialGoal>();
 
+        private User()
+        {
+            // Requiered my EF Core
+        }
         public User(string nickname, string passwordHash, string email)
         {
             if (string.IsNullOrWhiteSpace(nickname))
