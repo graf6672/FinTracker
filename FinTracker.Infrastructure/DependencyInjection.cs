@@ -4,6 +4,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using FinTracker.Infrastructure.Persistence;
+using FinTracker.Application.Interfaces.Repositories;
+using FinTracker.Infrastructure.Repositories;
 
 namespace FinTracker.Infrastructure
 {
@@ -18,6 +20,8 @@ namespace FinTracker.Infrastructure
                 options.UseSqlServer(connectionString));
 
             services.AddScoped<IPasswordHasher, BCryptPasswordHasher>();
+
+            services.AddScoped<IUserRepository, UserRepository>();
             return services;
         }
     }
