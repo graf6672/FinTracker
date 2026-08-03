@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using FinTracker.Infrastructure.Persistence;
 using FinTracker.Application.Interfaces.Repositories;
 using FinTracker.Infrastructure.Repositories;
+using FinTracker.Application.UseCases.Users;
 
 namespace FinTracker.Infrastructure
 {
